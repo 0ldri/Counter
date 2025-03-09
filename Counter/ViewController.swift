@@ -9,11 +9,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var countNumber: UILabel!
+    private var count: Int = 0
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        countNumber.text = "Значение счетчика: \(count)"
     }
-
-
-}
-
+    
+    @IBAction func buttonTap(_ sender: Any) {
+            count += 1
+            countNumber.text = "Значение счетчика: \(count)"
+        }
+        }
